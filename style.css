@@ -126,7 +126,6 @@ h4 {
 .card:hover {
     background-color: white !important;; /* Change background color on hover */
     color: black !important;; /* Change text color on hover */
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9) !important; /* Add black text shadow */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
 }
 
