@@ -5,6 +5,7 @@ html, body {
     width: 100%;
     overflow-x: hidden;
     font-family: monospace;
+    scroll-behavior: smooth;
     cursor: url('icons8-cursor-48.png'), auto;
 }
 
