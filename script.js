@@ -61,3 +61,18 @@ function revealDescription(button) {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const video = document.getElementById('background-video');
+    const loadingScreen = document.getElementById('loading-screen');
+    const sections = document.querySelectorAll('#About, #Projects, #Contact');
+
+    video.addEventListener('canplaythrough', function() {
+        loadingScreen.classList.add('fade-out');
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+            sections.forEach(section => section.style.display = 'block');
+            sections.forEach(section => section.classList.add('fade-in'));
+        }, 1000); // Match this duration with the fade-out animation duration
+    });
+});
