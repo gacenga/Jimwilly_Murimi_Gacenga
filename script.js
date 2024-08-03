@@ -62,17 +62,12 @@ function revealDescription(button) {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const video = document.getElementById('background-video');
+window.addEventListener('load', () => {
     const loadingScreen = document.getElementById('loading-screen');
-    const sections = document.querySelectorAll('#About, #Projects, #Contact');
-
-    video.addEventListener('canplaythrough', function() {
+    if (loadingScreen) {
         loadingScreen.classList.add('fade-out');
         setTimeout(() => {
             loadingScreen.style.display = 'none';
-            sections.forEach(section => section.style.display = 'block');
-            sections.forEach(section => section.classList.add('fade-in'));
-        }, 1000); // Match this duration with the fade-out animation duration
-    });
+        }, 1000); // match the duration of the fade-out animation
+    }
 });
